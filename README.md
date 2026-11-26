@@ -2,7 +2,7 @@
 
 **Kind:** take-home practice. Do it on your own time before the next meeting. Searching, AI and helping each other are allowed, because this is practice; record what you used in `SOURCES-AND-ASSISTANCE.md`. The lab exam is closed book, so make sure you understand every line you submit.
 
-**Kilig** needs profiles that stay valid. In the demo, the `Student` setter accepted any grade on purpose. Here your class has to **refuse** bad values, and a verified profile has to change one behaviour of its parent. It is syllabus Lab 4.
+**Kilig** needs profiles that stay valid. In the demo, the `Student` setter accepted any grade on purpose. Here your class has to **refuse** bad values, and a verified profile has to change one behaviour of its parent.
 
 ## Before you start
 
@@ -34,6 +34,7 @@ dart run lib/profile.dart
 - When a method returns `false` and when a setter simply ignores the value. The list above says which one the tests expect.
 - Read-only fields, and how to let outside code read a list it must not change.
 - Overriding with `super`: reusing the parent's method, then adding to it.
+- Throwing and catching errors: `throw ArgumentError(...)` inside a constructor stops a bad object from being made, and `try` with `catch` lets `main()` handle the error and print a friendly message. Look up what `ArgumentError` is and how a `catch` clause names it.
 
 ## How it is graded
 
@@ -44,9 +45,12 @@ Every activity also checks `student.json`: fill in your full name, student numbe
 ## Check and save your work
 
 ```sh
+dart pub get
 dart analyze
 dart test
 ```
+
+Run `dart pub get` first on a lab PC or a Mac: it downloads the test package, and `dart analyze` reports errors until it has run.
 
 The tests in your repository are a guide. The instructor grades from the course's own copy of the tests, so do not edit the tests to make them pass.
 
